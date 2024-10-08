@@ -1,0 +1,48 @@
+人脸及关键点检测   
+======================================================
+
+人脸及关键点检测是计算机视觉领域中的重要任务，旨在识别图像中的人脸并精确定位其关键部位，如眼睛、鼻子、嘴巴等。这项技术在众多应用场景中具有广泛的应用价值，包括人脸识别、表情分析和增强现实等。以下是人脸及关键点检测的主要方面：
+
+* 1. 任务目标
+    * 人脸检测：从图像中识别并定位人脸区域。
+    * 关键点检测：在检测到的人脸区域内识别并定位特定的面部特征，如眼睛、鼻尖和嘴巴的角落。
+* 2. 应用领域
+    * 人脸识别：用于身份验证和安全监控。
+    * 情感分析：通过分析面部表情来识别情感状态。
+    * 增强现实：在面部特征上叠加虚拟对象，如面具或滤镜。
+    * 视频监控：通过人脸检测和关键点分析，识别和跟踪特定人员。
+
+
+Example: 人脸及关键点检测
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+::
+
+    from maix import camera, display, image, nn, app
+
+    # 加载设置字体
+    image.load_font("sourcehansans", "/maixapp/share/font/SourceHanSansCN-Regular.otf", size = 20)
+    image.set_default_font("sourcehansans")
+
+    # 创建目标检测器，加载 YOLOv8 人脸检测及关键点检测模型
+    detector = nn.YOLOv8(model="/root/models/yolov8n_face.mud", dual_buff = True)
+
+    # 摄像头，显示屏初始化
+    cam = camera.Camera(detector.input_width(), detector.input_height(), detector.input_format())
+    dis = display.Display()
+
+    while not app.need_exit():
+        img = cam.read() 
+        objs = detector.detect(img, conf_th = 0.5, iou_th = 0.45, keypoint_th = 0.5)
+        for obj in objs:
+            img.draw_rect(obj.x, obj.y, obj.w, obj.h, color = image.COLOR_BLUE)
+            msg = f'{detector.labels[obj.class_id]}: {obj.score:.2f}'
+            img.draw_string(obj.x, obj.y, msg, color = image.COLOR_BLUE)
+            detector.draw_pose(img, obj.points, 2, image.COLOR_BLUE)
+        dis.show(img)
+
+测试图片
+
+    .. figure:: ./media/face.jpg 
+       :width: 400
+       :align: center

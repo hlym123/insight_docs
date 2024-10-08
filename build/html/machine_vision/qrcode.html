@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>二维码识别 &mdash; 筑智科技(Buintel) KaiYuan documention 文档</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=8ae68c14"></script>
+        <script src="../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../_static/translations.js?v=beaddf03"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="AprilTag 识别" href="apriltag.html" />
+    <link rel="prev" title="image 模块" href="image.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            筑智科技(Buintel)
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="搜索文档" aria-label="搜索文档" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="导航菜单">
+              <p class="caption" role="heading"><span class="caption-text">简介</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../brief.html">简介</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">入门使用</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">入门使用</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">外设使用</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../peripheral/index.html">外设</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">机器视觉</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">机器视觉</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="image.html">image 模块</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">二维码识别</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">二维码生成</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">案例程序：二维码识别</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="apriltag.html">AprilTag 识别</a></li>
+<li class="toctree-l2"><a class="reference internal" href="%E5%BD%A2%E7%8A%B6%E8%AF%86%E5%88%AB.html">形状识别</a></li>
+<li class="toctree-l2"><a class="reference internal" href="%E9%A2%9C%E8%89%B2%E8%AF%86%E5%88%AB.html">颜色识别</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">人工智能</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../ai/image_classify.html">图像分类</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ai/object_detect.html">目标检测</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ai/%E4%BA%BA%E8%84%B8%E5%8F%8A%E5%85%B3%E9%94%AE%E7%82%B9%E6%A3%80%E6%B5%8B.html">人脸及关键点检测</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ai/%E4%BA%BA%E4%BD%93%E5%85%B3%E9%94%AE%E7%82%B9%E6%A3%80%E6%B5%8B.html">人体关键点检测</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ai/%E5%9B%BE%E5%83%8F%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2.html">图像语义分割</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="移动版导航菜单" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">筑智科技(Buintel)</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="页面导航">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">机器视觉</a></li>
+      <li class="breadcrumb-item active">二维码识别</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/machine_vision/qrcode.rst.txt" rel="nofollow"> 查看页面源码</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="id1">
+<h1>二维码识别<a class="headerlink" href="#id1" title="Link to this heading"></a></h1>
+<p>二维码是一种可以存储大量信息的矩阵条码，最常见的是QR码（Quick Response Code）。它可以存储文字、网址、联系人信息等。</p>
+<section id="id2">
+<h2>二维码生成<a class="headerlink" href="#id2" title="Link to this heading"></a></h2>
+<p>点击 <a class="reference external" href="https://cli.im/">二维码生成</a> 进入二维码生成网站，按下图所示生成自定义的二维码</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/qrcode_create.png"><img alt="../_images/qrcode_create.png" src="../_images/qrcode_create.png" style="width: 800px;" /></a>
+</figure>
+<p>生成的二维码</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/qrcode_hello.png"><img alt="../_images/qrcode_hello.png" src="../_images/qrcode_hello.png" style="width: 200px;" /></a>
+</figure>
+</section>
+<section id="id4">
+<h2>案例程序：二维码识别<a class="headerlink" href="#id4" title="Link to this heading"></a></h2>
+<p>运行下面的程序，将摄像头对准二维码可查看二维码信息。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">maix</span> <span class="kn">import</span> <span class="n">image</span><span class="p">,</span> <span class="n">camera</span><span class="p">,</span> <span class="n">display</span>
+
+<span class="c1"># 加载设置字体</span>
+<span class="n">image</span><span class="o">.</span><span class="n">load_font</span><span class="p">(</span><span class="s2">&quot;sourcehansans&quot;</span><span class="p">,</span> <span class="s2">&quot;/maixapp/share/font/SourceHanSansCN-Regular.otf&quot;</span><span class="p">,</span> <span class="n">size</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span>
+<span class="n">image</span><span class="o">.</span><span class="n">set_default_font</span><span class="p">(</span><span class="s2">&quot;sourcehansans&quot;</span><span class="p">)</span>
+
+<span class="n">cam</span> <span class="o">=</span> <span class="n">camera</span><span class="o">.</span><span class="n">Camera</span><span class="p">(</span><span class="mi">640</span><span class="p">,</span> <span class="mi">480</span><span class="p">)</span> <span class="c1"># 摄像头测试化</span>
+<span class="n">disp</span> <span class="o">=</span> <span class="n">display</span><span class="o">.</span><span class="n">Display</span><span class="p">()</span>      <span class="c1"># 显示屏初始化</span>
+
+<span class="k">while</span> <span class="mi">1</span><span class="p">:</span>
+    <span class="n">img</span> <span class="o">=</span> <span class="n">cam</span><span class="o">.</span><span class="n">read</span><span class="p">()</span> <span class="c1"># 获取图像</span>
+    <span class="n">qrcodes</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">find_qrcodes</span><span class="p">()</span> <span class="c1"># 二维码识别</span>
+    <span class="k">for</span> <span class="n">qr</span> <span class="ow">in</span> <span class="n">qrcodes</span><span class="p">:</span> <span class="c1"># （可能存在多个二维码）逐个显示二维码信息</span>
+        <span class="n">corners</span> <span class="o">=</span> <span class="n">qr</span><span class="o">.</span><span class="n">corners</span><span class="p">()</span> <span class="c1"># 获取二维码角点坐标</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
+            <span class="n">img</span><span class="o">.</span><span class="n">draw_line</span><span class="p">(</span><span class="n">corners</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">corners</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span> <span class="n">corners</span><span class="p">[(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">%</span> <span class="mi">4</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">corners</span><span class="p">[(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">%</span> <span class="mi">4</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span> <span class="n">image</span><span class="o">.</span><span class="n">COLOR_BLUE</span><span class="p">,</span> <span class="n">thickness</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+        <span class="n">img</span><span class="o">.</span><span class="n">draw_string</span><span class="p">(</span><span class="n">qr</span><span class="o">.</span><span class="n">x</span><span class="p">(),</span> <span class="n">qr</span><span class="o">.</span><span class="n">y</span><span class="p">()</span> <span class="o">-</span> <span class="mi">25</span><span class="p">,</span> <span class="n">qr</span><span class="o">.</span><span class="n">payload</span><span class="p">(),</span> <span class="n">image</span><span class="o">.</span><span class="n">COLOR_BLUE</span><span class="p">)</span> <span class="c1"># 绘制二维码信息</span>
+    <span class="n">disp</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">img</span><span class="p">)</span> <span class="c1"># 显示图像</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="页脚">
+        <a href="image.html" class="btn btn-neutral float-left" title="image 模块" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="apriltag.html" class="btn btn-neutral float-right" title="AprilTag 识别" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 版权所有 Buintel。</p>
+  </div>
+
+  利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用的 
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
+    由 <a href="https://readthedocs.org">Read the Docs</a> 开发.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
