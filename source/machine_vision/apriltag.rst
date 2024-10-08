@@ -12,6 +12,9 @@ AprilTag 识别
    :width: 200
    :align: center
 
+Example: AprilTag 识别
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 ::
 
     from maix import image, camera, display
